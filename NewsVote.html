@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>NewsVote</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.2/react.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/JSXTransformer.js"></script>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</head>
+<body>
+<script type="text/jsx">
+    /** @jsx React.DOM */
+    var APP = React.createClass({        
+        render:function(){
+            return (
+                        <div>
+                            <h1>The Newsroom</h1>
+                            <br/>                            
+                            <newsItem />
+                        </div>
+                )
+        }
+    });     
+    var newsItem = React.createClass({
+        render:function(){
+            return (
+                        <div>
+                            <h2>India wins world cup</h2>
+                            <br/>
+                            <article> Once again Indians are champion</article>
+                            <button type="button" className="btn btn-success">
+                              <span className="glyphicon glyphicon-arrow-up"></span> Up
+                            </button>
+                            <button type="button" className="btn btn-danger">
+                              <span className="glyphicon glyphicon-arrow-down"></span> Down
+                            </button>
+                        </div>
+                )
+        }
+    }); 
+
+    React.render(
+        <APP />,
+        document.body)
+</script>
+</body>
+</html>
