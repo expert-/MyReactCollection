@@ -12,6 +12,19 @@
     body{
         margin:5%;
     }
+    .green{
+        color: green;
+    }
+    .red{
+        color: red;
+    }
+    .votes{
+        width:20px;
+        margin-right: :10px;
+    }
+    .btn{
+        margin: 2px;
+    }
     </style>
 </head>
 <body>
@@ -21,6 +34,7 @@
         getInitialState:function(){
             return {
                 count:0
+                
             }
         },
         up:function(){
@@ -41,7 +55,7 @@
                             <div>
                             <h2>India wins world cup</h2>                            
                             <article> Once again Indians are champion</article>
-                            <label value="count">{this.state.count}</label>
+                            <label value="count" className={this.state.count>=0 ? 'green votes' : 'red votes'} >{this.state.count}</label>
                             <button type="button" className="btn" onClick={this.up}>
                               <span className="glyphicon glyphicon-arrow-up"></span> Up
                             </button>
