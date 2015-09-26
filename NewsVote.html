@@ -8,39 +8,52 @@
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <style>
+    body{
+        margin:5%;
+    }
+    </style>
 </head>
 <body>
 <script type="text/jsx">
     /** @jsx React.DOM */
-    var APP = React.createClass({        
+    var APP = React.createClass({  
+        getInitialState:function(){
+            return {
+                count:0
+            }
+        },
+        up:function(){
+            this.setState({
+            count: this.state.count+1
+            })
+        }, 
+        down:function(){
+            this.setState({
+            count: this.state.count-1
+            })
+        },    
         render:function(){
             return (
                         <div>
                             <h1>The Newsroom</h1>
                             <br/>                            
-                            <newsItem />
-                        </div>
-                )
-        }
-    });     
-    var newsItem = React.createClass({
-        render:function(){
-            return (
-                        <div>
-                            <h2>India wins world cup</h2>
-                            <br/>
+                            <div>
+                            <h2>India wins world cup</h2>                            
                             <article> Once again Indians are champion</article>
-                            <button type="button" className="btn btn-success">
+                            <label value="count">{this.state.count}</label>
+                            <button type="button" className="btn" onClick={this.up}>
                               <span className="glyphicon glyphicon-arrow-up"></span> Up
                             </button>
-                            <button type="button" className="btn btn-danger">
+                            <button type="button" className="btn" onClick={this.down}>
                               <span className="glyphicon glyphicon-arrow-down"></span> Down
                             </button>
+
+                        </div>
                         </div>
                 )
         }
-    }); 
-
+    });      
     React.render(
         <APP />,
         document.body)
