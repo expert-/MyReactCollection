@@ -25,7 +25,7 @@ var APP = React.createClass({
     render: function () {
         return (
             <div>
-                <p id="adults">Adults</p>
+                <p id="adults">{this.props.text}</p>
                     <div id="nop">
                         <button type="button" className="btn" onClick={this.down}>
                             <span className="glyphicon glyphicon-minus"></span>
@@ -42,4 +42,5 @@ var APP = React.createClass({
         )
     }
 });
-React.render(<APP />, document.body)
+React.render(<APP text="Adult"/>, document.getElementById("numOfAdults"))
+React.render(<APP text="Children"/>, document.getElementById("children"))

@@ -9,7 +9,7 @@ body{
 }
 .btn{
     width:33%;
-    background-color: #FFFFFF;
+    background-color: #fcf8e3;
 }
 #nopText{
     text-align: center;
@@ -17,11 +17,25 @@ body{
     border: none;
 }
 #nop{
-    border: solid;
-    width: 10%;
+    width: 100%;
 }
 #adults{
     text-align: center;
-    width:10%;
-    border: solid;
+    width:100%;
+}
+#numOfAdults{
+    width: 38%;
+    float: left;
+    background-color: #fcf8e3;
+    border-radius: 2px;
+    margin: 3%;
+}
+#children{
+    width: 38%;
+    float: left;
+    background-color: #fcf8e3;
+    margin: 3%;
+}
+#personCount{
+    width: 30%;
 }
