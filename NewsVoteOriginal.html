@@ -55,15 +55,13 @@
                             <div>
                             <h2>India wins world cup</h2>                            
                             <article> Once again Indians are champion</article>
-                            <button type="button" className="btn" onClick={this.down}>
-                            <span className="glyphicon glyphicon-minus"></span>
-                            </button>
-                            <input type="textbox" id="nop" maxlength="1" min="0" max="10" value={this.state.count >=0 ? this.state.count : '0'} className={this.state.count>=0 ? 'green votes' : 'red votes'} ></input>
-
+                            <label value="count" className={this.state.count>=0 ? 'green votes' : 'red votes'} >{this.state.count}</label>
                             <button type="button" className="btn" onClick={this.up}>
-                              <span className="glyphicon glyphicon-plus"></span>
+                              <span className="glyphicon glyphicon-arrow-up"></span> Up
                             </button>
-
+                            <button type="button" className="btn" onClick={this.down}>
+                              <span className="glyphicon glyphicon-arrow-down"></span> Down
+                            </button>
 
                         </div>
                         </div>

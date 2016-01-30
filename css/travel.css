@@ -1,0 +1,23 @@
+body{
+    margin:5%;
+}
+.green{
+    color: green;
+}
+.red{
+    color: red;
+}
+.votes{
+    width:5%;
+}
+.btn{
+    width:20%;
+    background-color: #FFFFFF;
+}
+#nop{
+    width: 15%;
+}
+#adults{
+    width:20%;
+    border: solid;
+}
