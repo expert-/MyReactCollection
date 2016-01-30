@@ -30,9 +30,9 @@ var APP = React.createClass({
                         <button type="button" className="btn" onClick={this.down}>
                             <span className="glyphicon glyphicon-minus"></span>
                         </button>
-                        <input type="textbox" id="nopText" maxLength="1" min="0" max="10"
+                        <label id="nopText" maxLength="1" min="0" max="10"
                                value={this.state.count >=0 ? this.state.count : '0'}
-                               className={this.state.count>0 ? 'green votes btn' : 'red votes btn'}></input>
+                               className={this.state.count>0 ? 'green' : 'red'}>{this.state.count}</label>
 
                         <button type="button" className="btn" onClick={this.up}>
                             <span className="glyphicon glyphicon-plus"></span>
