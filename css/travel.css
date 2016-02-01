@@ -15,6 +15,7 @@ body{
     text-align: center;
     width:34%;
     border: none;
+
 }
 #nop{
     width: 100%;
@@ -23,19 +24,17 @@ body{
     text-align: center;
     width:100%;
 }
-#numOfAdults{
-    width: 38%;
+.numOfAdults{
+    width: 44%;
     float: left;
     background-color: #fcf8e3;
     border-radius: 2px;
     margin: 3%;
 }
-#children{
-    width: 38%;
-    float: left;
-    background-color: #fcf8e3;
-    margin: 3%;
-}
 #personCount{
     width: 30%;
+}
+#totalTravellerDisplay{
+    text-align: center;
+    background-color: #fcf8e3;
 }
